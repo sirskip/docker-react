@@ -14,6 +14,10 @@ RUN npm run build
 
 FROM nginx
 
+# This is NOT used on local workstaton testing and has no affect
+# This IS used in prod deployments and in AWS Deployments
+# AWS BeanStalk will read this and open up port 80 to public
+EXPOSE 80  
 
 COPY --from=builder /app/build /usr/share/nginx/html 
 
