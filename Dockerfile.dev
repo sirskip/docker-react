@@ -7,7 +7,5 @@ RUN npm install
 
 COPY . .
 
-COPY junkfile-canTossThis .
-
 CMD ["npm", "run", "start"]
 
